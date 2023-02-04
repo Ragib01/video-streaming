@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  nginx:
+    build: .
+    ports:
+      - "1935:1935"
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/usr/local/nginx/conf/nginx.conf
+      - ./tmp/hls:/tmp/hls
